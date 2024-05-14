@@ -41,11 +41,11 @@ def clean(text):
 
 
 def collect_text(soup):
-    text = f'url: {url}\n\n'
-    para_text = soup.find_all('p')[11:]
+    text = f'Medium article: {"Papa-what-is-a-neural-network".center(90)}\n\n'
+    para_text = soup.find_all('p')[11:24]
     print(f"paragraphs text = \n {para_text}")
     for para in para_text:
-        text += f"{para.text}\n\n"
+        text += f"{para.text}\n"
     return text
 
 # function to save file in the current directory
